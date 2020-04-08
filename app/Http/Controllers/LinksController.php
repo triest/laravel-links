@@ -33,4 +33,21 @@ class LinksController extends Controller
             'original_short' => $output_link
         ]);
     }
+
+    public function link($link)
+    {
+
+
+        $linkObject = Link::select(['id', 'original_link', 'original_short'])->where('original_short', $link)->first();
+
+        if ($linkObject != null) {
+            if ($linkObject->original_link == null) {
+                abort(404);
+            }
+        }else{
+            abort(404);
+        }
+
+        return redirect()->away($linkObject->original_link);
+    }
 }

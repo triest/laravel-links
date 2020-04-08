@@ -3,8 +3,8 @@
 @section('content')
 
     @if(isset($original_link) && isset($original_short))
-        <p>Ориганальная ссылка: {{$original_link}}</p>
-        <p>Короткая ссылка: {{$original_short}}</p>
+        <p>Original Link: {{$original_link}}</p>
+        <p>Short link: {{$original_short}}</p>
     @endisset
 
     <form action="{{route('storeLink')}}" method="post" enctype="multipart/form-data">
@@ -13,6 +13,6 @@
         @if($errors->has('link'))
             <font color="red"><p>  {{$errors->first('link')}}</p></font>
         @endif
-        <button type="submit" class="btn btn-primary">Создать анкету</button>
+        <button type="submit" class="btn btn-primary">Create short Link</button>
     </form>
 @endsection

@@ -12,6 +12,6 @@
 */
 
 Route::get('/', 'LinksController@index')->name('main');
-Route::post('/links/store', 'LinksController@store')->name('storeLink');
+Route::post('/', 'LinksController@store')->name('storeLink');
 
-Route::get('/:link', 'LinksController@link')->name('main');
+Route::get('/{link}', 'LinksController@link')->name('link');
