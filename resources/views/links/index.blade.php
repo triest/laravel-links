@@ -17,7 +17,7 @@
             <label for="link">Input link:</label>
             <input type="text" name="link" id="link" required>
             @if($errors->has('link'))
-                <font color="red"><p>  {{$errors->first('link')}}</p></font>
+                <font color="red"><p><b> {{$errors->first('link')}}</b></p></font>
             @endif
         </div>
         <button type="submit" class="btn btn-primary">Create short Link</button>
