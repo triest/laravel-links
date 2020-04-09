@@ -36,8 +36,6 @@ class LinksController extends Controller
 
     public function link($link)
     {
-
-
         $linkObject = Link::select(['id', 'original_link', 'original_short'])->where('original_short', $link)->first();
 
         if ($linkObject != null) {
