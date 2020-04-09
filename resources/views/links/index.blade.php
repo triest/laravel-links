@@ -10,7 +10,7 @@
     @endisset
     <br><br>
 
-    <b>Create new link</b>
+    <b>Create short link:</b>
     <form action="{{route('storeLink')}}" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="form-group">
